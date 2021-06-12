@@ -9,13 +9,17 @@
     "start-server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["pinterest-clone", "pinterest"],
+  "keywords": [
+    "pinterest-clone",
+    "pinterest"
+  ],
   "author": "Kirstie Rodriguez",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
