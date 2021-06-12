@@ -1,9 +1,10 @@
 import React from 'react';
+import { SinglePin } from '../components'
 
 export default ({pins}) => {
     return (
-        <div>
-            { pins.length && pins.maps(pin => <SinglePin pin={pin} />) }
+        <div class='pin-grid'>
+            { pins.length && pins.map(pin => <SinglePin pin={pin} />) }
         </div>
     )
 }
