@@ -7,7 +7,7 @@ export default (props) => {
         <div class='navbar' style={{display: 'flex', alignItems: 'center', justifyContent:'space-between'}}>
             <Link to='/' style={{display:'flex', alignItems: 'center'}}>
                 <img src='/assets/images/pinterest_logo.png' alt='pinterest-logo' style={{textDecoration:'none', width:'30px', height:'auto'}}/>
-                Pinterest
+                Pin-A-Like
             </Link>
             <Link to='/'> Show me cats!</Link>
             <div>

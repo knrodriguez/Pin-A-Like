@@ -9,12 +9,12 @@ const App = () => {
         <Router>
             <h1>Pin-A-Like</h1>
             <Navbar />
-            {/* <Switch>
-                <Route exact path='/' render={() => <AllPinsView search='cats' />} />
-                <Route exact path='/cats' render={() => <AllPinsView search='cats' />}/>
+            <Switch>
+                <Route path='/' component={AllPinsView} />
+                {/* <Route exact path='/cats' render={() => <AllPinsView search='cats' />}/>
                 <Route exact path='/pins/:pinId' component={PinView} />
-                <Route component={NotFoundView} />
-            </Switch> */}
+                <Route component={NotFoundView} /> */}
+            </Switch>
         </Router>
     )
 }
