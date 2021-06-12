@@ -1,2 +1,3 @@
 /node_modules
-/react-app-vers
+/public/bundle.js
+/public/bundle.js.LICENSE.txt
