@@ -7,7 +7,6 @@ import { AllPinsView, PinView, NotFoundView } from './views'
 const App = () => {
     return (
         <Router>
-            <h1>Pin-A-Like</h1>
             <Navbar />
             <Switch>
                 <Route path='/' component={AllPinsView} />

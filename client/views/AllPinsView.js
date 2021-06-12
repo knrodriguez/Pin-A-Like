@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as data from '../../nyc_ttp_pins.json';
 import Pin from '../models/pin'
+import { AllPins } from '../components'
 const MAX_PINS = 20;
 
 export default (props) => {
