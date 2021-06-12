@@ -24,7 +24,7 @@ export default (props) => {
 
     return(
         <div>
-            { pins.length && <AllPins pins={pins} />}
+            { pins.length && <AllPins pins={pins} /> }
         </div>
     )
 }
