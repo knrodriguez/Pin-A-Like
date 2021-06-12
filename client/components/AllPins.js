@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
 import { SinglePin } from '../components';
 
 export default ({pins, loadPins}) => {
