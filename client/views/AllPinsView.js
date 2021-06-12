@@ -8,8 +8,12 @@ export default (props) => {
     const [pins, setPins] = useState([]);
     
     useEffect(() => {
-        setPins(getPins());
+        loadPins();
     }, [])
+
+    function loadPins(){
+        setPins([...pins, ...getPins()]);
+    }
 
     function getPins(){
         const pinsToLoad = [];
@@ -24,8 +28,15 @@ export default (props) => {
     }
 
     return(
-        <div>
-            { pins.length && <AllPins pins={pins} /> }
+        <div 
+            style={{
+                display:'flex', 
+                flexDirection: 'row', 
+                overflow:'hidden'
+            }}>
+            { 
+                pins.length && <AllPins pins={pins} loadPins={loadPins}/> 
+            }
         </div>
     )
 }
