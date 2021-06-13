@@ -6,13 +6,16 @@ const MAX_PINS = 20;
 
 export default (props) => {
     const [pins, setPins] = useState([]);
-    
+    const [newPins, setNewPins] = useState([]);
+
     useEffect(() => {
         loadPins();
     }, [])
 
     function loadPins(){
-        setPins([...pins, ...getPins()]);
+        const morePins = getPins();
+        setPins([...pins, ...morePins]);
+        setNewPins(morePins)
     }
 
     function getPins(){
@@ -28,14 +31,9 @@ export default (props) => {
     }
 
     return(
-        <div 
-            style={{
-                display:'flex', 
-                flexDirection: 'row', 
-                overflow:'hidden'
-            }}>
+        <div class='all-pins-view'>
             { 
-                pins.length && <AllPins pins={pins} loadPins={loadPins}/> 
+                pins.length && <AllPins pins={pins} loadPins={loadPins} newPins={newPins}/> 
             }
         </div>
     )

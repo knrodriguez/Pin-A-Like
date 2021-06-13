@@ -7,6 +7,7 @@ class Pin {
         this.pinner = pinData.pinner;
         this.title = pinData.title;
         this.likeCount = pinData.like_count;
+        this.id = pinData.id;
     }
 }
 
