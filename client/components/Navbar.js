@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-// import pinterestLogo from './../../public/images/pinterest_logo.png';
 
 export default (props) => {
     return(
@@ -24,8 +23,8 @@ export default (props) => {
             </div>
             <div class='navbar navbar-group'>
                 <Link to='/'> Show me cats!</Link>
-                <Link to='/404'>Login</Link>
-                <Link to='/404'>Sign Up</Link>
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Sign Up</Link>
             </div>
         </div>
 
