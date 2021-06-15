@@ -9,7 +9,7 @@ const sizes = {
     200:1, 500:2, 750:3, 1000:4, 1250:5, 1500:6, 1750:7, 2000:8
 }
 
-export default ({pins, loadPins}) => {
+export default ({pins, loadPins, loading}) => {
     const pinGridRef = useRef();
     const [columns, setColumns] = useState(1);
 

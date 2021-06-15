@@ -15,7 +15,7 @@ export default ({pin, pinWidth, MIN_PIN_WIDTH}) => {
                     overlay && 
                     <>
                         <div class='overlay'></div>
-                        <span>OPEN</span>
+                        <span>Open</span>
                     </>
                 }
                 <img 

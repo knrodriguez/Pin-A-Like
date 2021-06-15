@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import * as data from '../../nyc_ttp_pins.json';
+import React, { useState, useEffect, useCallback, useDebugValue } from 'react';
+import * as data from '../../pins.json';
 import Pin from '../models/pin'
 import { AllPins } from '../components'
 const MAX_PINS = 35;
@@ -9,7 +9,7 @@ export default (props) => {
 
     useEffect(() => {
         loadPins();
-        
+
         return () => setPins([]);
     }, [])
 
@@ -35,7 +35,7 @@ export default (props) => {
                 pins.length && 
                 <AllPins 
                     pins={pins} 
-                    loadPins={loadPins} 
+                    loadPins={loadPins}
                 /> 
             }
         </div>
