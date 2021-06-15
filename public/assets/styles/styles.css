@@ -75,6 +75,7 @@ a:hover {
 .all-pins-view{
     overflow: hidden;
     max-height: 90%;
+    display: flex;
 }
 
 .pin-grid{

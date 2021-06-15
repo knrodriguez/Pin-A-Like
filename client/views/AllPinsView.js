@@ -6,21 +6,15 @@ const MAX_PINS = 35;
 
 export default (props) => {
     const [pins, setPins] = useState([]);
-    const [pinsViewWidth, setPinsViewWidth] = useState(0)
-
-    const pinsViewRef = useCallback( node => {
-        if(node){
-            setPinsViewWidth(node.offsetWidth)
-        }
-    },[]);
 
     useEffect(() => {
         loadPins();
+        
+        return () => setPins([]);
     }, [])
 
     function loadPins(){
-        const morePins = getPins();
-        setPins([...pins, ...morePins]);
+        setPins([...pins, ...getPins()]);
     }
 
     function getPins(){
@@ -36,16 +30,14 @@ export default (props) => {
     }
 
     return(
-        <div class='all-pins-view' ref={pinsViewRef} style={{display: 'flex'}}>
-            <div style={{width: 200, height:500}}>FAKE BLOCK HERE</div>
+        <div class='all-pins-view'>
             { 
                 pins.length && 
                 <AllPins 
                     pins={pins} 
                     loadPins={loadPins} 
-                    pinsViewWidth={pinsViewWidth}/> 
+                /> 
             }
-            <div style={{width: 800, height:500}}>FAKE BLOCK HERE</div>
         </div>
     )
 }
