@@ -5,13 +5,13 @@ A Pinterest Clone to highlight infinite scrolling.
 * * *
 ### Infinite Scrolling 
 
-![Infinite Scrolling in Pin-A-Like](/public/assets/readme-assets/infinite-scroll.gif)
+![Infinite Scrolling in Pin-A-Like](./public/assets/readme-assets/infinite-scroll.gif)
 
 ### Pinterest-Style Grid
-![Grid Layout](/public/assets/readme-assets/grid-layout.png)
+![Grid Layout](./public/assets/readme-assets/grid-layout.png)
 
 ### Resizeable Pin Grid
-![Resizeable Pin Grid](/public/assets/readme-assets/resizeable-pin-grid.png)
+![Resizeable Pin Grid](./public/assets/readme-assets/resizeable-pin-grid.png)
 
 ## Getting Started
 * * *
