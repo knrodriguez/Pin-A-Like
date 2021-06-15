@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-const PIN_WIDTH = 236;
 
-export default ({pin}) => {
+export default ({pin, pinWidth, MIN_PIN_WIDTH}) => {
     const [overlay, setOverlay] = useState(false);
-
+    const imageWidth = `${pinWidth}x${pinWidth === MIN_PIN_WIDTH ? '136' : ''}`;
+    
     return(
         <div class='pin'>
             <div 
@@ -18,7 +18,9 @@ export default ({pin}) => {
                         <span>OPEN</span>
                     </>
                 }
-                <img src={pin.images[`${PIN_WIDTH}x`].url} />
+                <img 
+                    src={pin.images[imageWidth].url} 
+                />
             </div>
             <h3 class='pin-title'>{pin.title}</h3>
         </div>
