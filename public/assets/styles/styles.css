@@ -8,6 +8,10 @@
     padding-right: 3px;
 }
 
+.padding-left{
+    padding-left: 3%;
+}
+
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -19,6 +23,14 @@
 
 .justify-start {
     justify-content: start;
+}
+
+.fill-space{
+    flex-grow: 3;
+}
+
+.flex-container{
+    display: flex;
 }
 
 a {
@@ -35,7 +47,7 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     margin: 10px 8px;
-    flex: 1 1 33%;
+    flex-basis: 33%;
     font-weight: bold;
 }
 
@@ -115,4 +127,24 @@ h3.pin-title{
     top: calc(50% - (1.5em/2));
     left: calc(50% - 1.5em);
 } 
+
+#search-bar {
+    min-height: 2%;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    min-height: 50px;
+}
+
+#search-bar > input {
+    font-size: 18px;
+    border: none;
+}
+
+#search-bar > input:hover, input:focus {
+    outline: none;
+}
+
+.space-between{
+    justify-content: space-between;
+}
 
