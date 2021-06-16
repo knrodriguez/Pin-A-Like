@@ -5,7 +5,7 @@ A Pinterest Clone to highlight infinite scrolling.
 * * *
 ### Infinite Scrolling 
 
-![Infinite Scrolling in Pin-A-Like](https://i.imgur.com/m1Zt5R6.mp4)
+![Infinite Scrolling](https://github.com/knrodriguez/Pin-A-Like/blob/main/public/assets/readme-assets/infinite-scrolling.gif?raw=true)
 
 ### Pinterest-Style Grid
 ![Grid Layout](./public/assets/readme-assets/grid-layout.png)
@@ -39,13 +39,6 @@ npm install
 npm start
 ```
 * To interact with Pin-A-Like, enter into your browser's URL bar `localhost:3000`.
-
-## Help
-* * *
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```d
 
 ## Authors
 
