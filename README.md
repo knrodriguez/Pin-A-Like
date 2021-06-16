@@ -5,7 +5,7 @@ A Pinterest Clone to highlight infinite scrolling.
 * * *
 ### Infinite Scrolling 
 
-![Infinite Scrolling in Pin-A-Like](https://imgur.com/a/twKNP3M)
+![Infinite Scrolling in Pin-A-Like](https://i.imgur.com/m1Zt5R6.mp4)
 
 ### Pinterest-Style Grid
 ![Grid Layout](./public/assets/readme-assets/grid-layout.png)
