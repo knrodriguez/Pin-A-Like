@@ -6,8 +6,7 @@
   "scripts": {
     "start": "npm run build & npm run start-server",
     "build": "webpack -w",
-    "start-server": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-server": "nodemon server.js"
   },
   "keywords": [
     "pinterest-clone",

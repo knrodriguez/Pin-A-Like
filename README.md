@@ -42,16 +42,33 @@ Install the dependencies required to run Pin-A-Like by running in the terminal:
 ```bash
 npm install
 ```
-To run the program, enter into your terminal:
+
+**macOS and Linux**
+
+To run the program in macOS or Linux, enter into your terminal:
 ```bash
 npm start
 ```
+
+**Windows**
+
+For Windows, open two terminals. In one terminal, enter the following to build the bundle:
+```
+npm run build
+```
+In the other teminal, enter the following command to start the server: 
+```
+npm run start-dev
+```
+
+**Website**
+
 To interact with Pin-A-Like, enter into your browser's URL bar `localhost:3000`.
 
 ## FAQ
 
-* I am cloning this repo and it is taking a while. Why is that?
-My apologies! The readme-assets folder contains some rather large gifs, which may take some time to download on your machine.
+**Why is it taking a while to clone this repo?**  
+The readme-assets folder contains some rather large gifs, which may take some time to download on your machine. If it takes longer than 5 minutes, abort and try cloning it again. If the issue, persists, submit an issue. 
 
 ## Authors
 

@@ -10,7 +10,7 @@ export const sizes = {
 
 export function getPins(){
     const pinsToLoad = [];
-
+    console.log(data)
     for(let i = 0; i < MAX_PINS; i++){
         let randNum = Math.floor(Math.random() * data.length);
         let pin = new Pin(data[randNum]);
