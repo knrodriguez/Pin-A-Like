@@ -79,10 +79,10 @@ a:hover {
 }
 
 .pin-grid{
-    height: 95vh;
+    height: 93vh;
     overflow: scroll; 
     overflow-y: scroll; 
-    flex-grow: 80;
+    flex-grow: 1;
 }
 
 .pin {

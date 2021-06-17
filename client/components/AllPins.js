@@ -1,62 +1,46 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Masonry from 'react-responsive-masonry';
 import { SinglePin } from '../components';
+import { 
+    getPins, 
+    isPageEnd, 
+    calculateColumns,
+    MAX_PIN_WIDTH,
+    MIN_PIN_WIDTH
+} from '../reducers'
 
-const MAX_PIN_WIDTH = 236;
-const MIN_PIN_WIDTH = 136;
-
-const sizes = {
-    200:1, 500:2, 750:3, 1000:4, 1250:5, 1500:6, 1750:7, 2000:8
-}
-
-export default ({pins, loadPins, loading}) => {
+export default (props) => {
     const pinGridRef = useRef();
     const [columns, setColumns] = useState(1);
+    const [pins, setPins] = useState([]);
 
     useEffect(() => {
+        loadPins();
         resizeAllPins();
         window.addEventListener('resize', resizeAllPins)
 
         return () => {
             window.removeEventListener('resize', resizeAllPins)
+            setPins([]);
         }
-    },[])
+    }, [])
+
+    function loadPins(){
+        setPins([...pins, ...getPins()]);
+    }
 
     function resizeAllPins (){
-        setColumns(calculateColumns());
+        setColumns(calculateColumns(pinGridRef));
     }
 
-    function isPageEnd(e){
-        const {
-            scrollTop, 
-            clientHeight, 
-            scrollHeight
-        } = pinGridRef.current;
-
-        if(scrollTop + clientHeight >= scrollHeight - 1){
-            loadPins();
-        } 
-    }
-
-    function calculateColumns(){
-        if(!pinGridRef) return;
-
-        const {offsetWidth} = pinGridRef.current;
-        let numColumns = 1;
-
-        for(const windowSize in sizes){
-            if(offsetWidth > windowSize) {
-                numColumns = sizes[windowSize];
-            } else return numColumns;
-        }
-
-        return numColumns;
+    function infiniteScroll(){
+        isPageEnd(pinGridRef) && loadPins();
     }
     
     return (
         <div class='pin-grid' 
             ref={pinGridRef}
-            onScroll={isPageEnd}>
+            onScroll={infiniteScroll}>
                 <Masonry columnsCount={columns} gutter='10px'>
                     { 
                         pins.length && 
@@ -64,7 +48,11 @@ export default ({pins, loadPins, loading}) => {
                             <SinglePin 
                                 key={pin.id} 
                                 pin={pin} 
-                                pinWidth={columns > 1 ? MAX_PIN_WIDTH : MIN_PIN_WIDTH}
+                                pinWidth={
+                                            columns > 1 ? 
+                                            MAX_PIN_WIDTH : 
+                                            MIN_PIN_WIDTH
+                                        }
                                 MIN_PIN_WIDTH={MIN_PIN_WIDTH}
                             />
                         ) 
