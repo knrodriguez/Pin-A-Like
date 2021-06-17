@@ -48,6 +48,11 @@ npm start
 ```
 To interact with Pin-A-Like, enter into your browser's URL bar `localhost:3000`.
 
+## FAQ
+
+* I am cloning this repo and it is taking a while. Why is that?
+My apologies! The readme-assets folder contains some rather large gifs, which may take some time to download on your machine.
+
 ## Authors
 
 [![LinkedIn Logo](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.polycom.com%2Fcontent%2Fdam%2Fpolycom%2Fwww%2Fimages%2Ficons-and-buttons%2Flogo-linkedin-small.png&f=1&nofb=1)](https://www.linkedin.com/in/kirstierodriguez/) Kirstie Rodriguez
