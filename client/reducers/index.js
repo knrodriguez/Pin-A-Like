@@ -1,5 +1,5 @@
-import * as data from '../../pins.json';
 import Pin from '../models/pin'
+import 'regenerator-runtime/runtime'
 
 export const MAX_PINS = 80;
 export const MAX_PIN_WIDTH = 236;
@@ -8,9 +8,11 @@ export const sizes = {
     200:1, 500:2, 750:3, 1000:4, 1250:5, 1500:6, 1750:7, 2000:8
 }
 
-export function getPins(){
+export async function getPins(){
     const pinsToLoad = [];
-    console.log(data)
+    let response = await fetch('/api/pins')
+    let data = await response.json();
+       
     for(let i = 0; i < MAX_PINS; i++){
         let randNum = Math.floor(Math.random() * data.length);
         let pin = new Pin(data[randNum]);

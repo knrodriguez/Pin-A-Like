@@ -25,8 +25,9 @@ export default (props) => {
         }
     }, [])
 
-    function loadPins(){
-        setPins([...pins, ...getPins()]);
+    async function loadPins(){
+        const newPins = await getPins();
+        setPins([...pins, ...newPins]);
     }
 
     function resizeAllPins (){
