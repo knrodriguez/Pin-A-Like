@@ -1,5 +1,5 @@
 # Pin-A-Like
-A Pinterest clone.
+Challenge #1 - Infinite-Scroll
 
 ## Features
 
