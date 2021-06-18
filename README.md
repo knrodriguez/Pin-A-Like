@@ -7,12 +7,12 @@ A Pinterest clone.
 
 ![Infinite Scrolling](https://github.com/knrodriguez/Pin-A-Like/blob/main/public/assets/readme-assets/infinite-scrolling.gif?raw=true)
 
-The infinite scroll was designed as part of the pin grid, so that if widgets were added to the same view with the pin grid, the pin grid will still scroll infinitely and render random pins. 
+The infinite scroll was designed as part of the pin grid, so that if widgets were added to the same view with the pin grid, the pin grid will still scroll infinitely and render random pins. For version 2.0, I would like to add a loading screen when new pins are being fetched.
 
 ### Pinterest-Style Grid
 ![Grid Layout](./public/assets/readme-assets/grid-layout.png)
 
-Using React-Responsive-Masonry, I was able to incorporate a Pinterest-style grid for the pins. The components made it easy to add items to the grid; however, the rendering of the grid items is not even (i.e., one column can still have pins while another column had whitespace). If I had more time, I would build out my own grid. 
+Using React-Responsive-Masonry, I was able to incorporate a Pinterest-style grid for the pins. The components made it easy to add items to the grid; however, the rendering of the grid items is not even (i.e., one column can still have pins while another column had whitespace). For version 2.0, I would build out my own grid. 
 
 ### Resizeable Pin Grid
 ![Resizeable Pin Grid](https://github.com/knrodriguez/Pin-A-Like/blob/main/public/assets/readme-assets/resizable-pin-grid.gif?raw=true)
@@ -69,6 +69,9 @@ To interact with Pin-A-Like, enter into your browser's URL bar `localhost:3000`.
 
 **Why is it taking a while to clone this repo?**  
 The readme-assets folder contains some rather large gifs, which may take some time to download on your machine. If it takes longer than 5 minutes, abort and try cloning it again. If the issue, persists, submit an issue. 
+
+**How are you loading data?**  
+A route on the server reads the JSON file and sends its contents. On the client side, an HTTP request is made to that route and fetches the JSON pin data. For version 2.0, I would set up a PostgreSQL database and seed it with the JSON data. 
 
 ## Authors
 
