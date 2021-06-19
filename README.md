@@ -21,6 +21,15 @@ The pin grid is responsive due to a custom function written in the AllPins compo
 
 ![Pin Grid with Widgets](https://github.com/knrodriguez/Pin-A-Like/blob/main/public/assets/readme-assets/pin-grid-with-widgets.png?raw=true)
 
+## Technologies Used
+
+* [ReactJS](https://reactjs.org/)
+* [React Router](https://reactrouter.com/)
+* [react-responsive-masonry](https://github.com/cedricdelpoux/react-responsive-masonry#readme)
+* [Express](http://expressjs.com/)
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+
 ## Getting Started
 
 ### Dependencies
